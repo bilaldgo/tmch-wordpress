@@ -1,0 +1,68 @@
+/***********************************
+* contact page
+************************************/ 
+.contact{
+    .grid-contact{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        grid-gap: 40px;
+        .review-box{
+            
+            width: 100%;
+            height: auto;
+            .svg-container{
+                position: relative;
+                top: unset;
+                right: unset;
+                width: unset;
+                height: unset;
+                margin: 0px auto;
+                svg{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            .h5{
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 30px;
+                text-align: center;
+                margin-top: 10px;
+            }
+            p{
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 30px;
+                margin-top: 8px;
+            }
+
+            &:hover, &:focus{
+                .svg-container{
+                    animation: light-shake 75ms infinite;
+                    animation-timing-function: linear;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 769.98px) {
+    .contact{
+        .h2{
+            font-size: 36px;
+        }
+        .grid-contact{
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        }
+    }
+}
+@media (max-width: 575.98px) {
+    .contact{
+        .h2{
+            font-size: 36px;
+        }
+        .grid-contact{
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+// @import "scss/_bootstrap-imports.scss";
+@import "scss/_colors.scss";
+@import "scss/_global.scss";
+@import "scss/_functions.scss";
+@import "scss/_defaults.scss";
+@import "scss/_navigation.scss";
+@import "scss/_svg-animations.scss";
+@import "scss/_cta.scss";
+
+
+/*
+* pages styling
+*/ 
+@import "pages/_home.scss";
+@import "pages/_about.scss";
+@import "pages/_reviews.scss";
+@import "pages/_universities.scss";
+@import "pages/_policy.scss";
+@import "pages/_contact.scss";
+@import "pages/_faqs.scss";
+@import "pages/_blog.scss";
+@import "pages/_services.scss";
+@import "pages/_cart-pages.scss";
+
+
+
+@import "scss/_footer.scss";
+@import "scss/_media-queries.scss";

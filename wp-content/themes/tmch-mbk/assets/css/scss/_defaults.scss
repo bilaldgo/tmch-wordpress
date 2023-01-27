@@ -1,0 +1,97 @@
+/*
+**********************************************
+* Default theme Global styling
+**********************************************
+*/
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+
+body {
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  color: $theme-black;
+  overflow-x: hidden;
+  // min-height: 8000px;
+  margin: 0;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+p{
+  font-family: 'Open Sans', sans-serif;
+  color: $theme-black;
+  font-weight: 400;
+  margin-bottom: 10px;
+  line-height: 1.8;
+  font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.4;
+  display: block;
+  width: 100%;
+}
+
+a{
+  font-family: 'Open Sans', sans-serif;
+}
+ul, ol{
+  font-family: 'Open Sans', sans-serif;
+  color: $theme-black;
+  font-weight: 400;
+  position: relative;
+  // background: red;
+  li{
+    position: relative;
+    line-height: 1.4;
+    // background: green;
+  }
+}
+
+::-webkit-scrollbar {
+   width: 5px;
+  //display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: $theme-grey;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $accent-color;
+  transition: all 0.5s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $base-color;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+
+.loading-overlay {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(28, 12, 67, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}

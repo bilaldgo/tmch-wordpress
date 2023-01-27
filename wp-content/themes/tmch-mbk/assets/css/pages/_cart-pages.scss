@@ -1,0 +1,105 @@
+/*
+**********************************************
+* global cart/product related styling 
+**********************************************
+*/
+.cart{
+    
+}
+.cart-sidebar-box{
+    background: $theme-black;
+    box-shadow: 0px 4px 4px rgba(2, 2, 2, 0.25);
+    border-radius: 20px;
+    padding: 20px;
+    img{
+        width: 140px;
+        height: 140px;
+        border-radius: 20px;
+        object-fit: cover;
+        object-position: center;
+        margin-bottom: 15px;
+    }
+    .h5{
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 36px;
+        color: $theme-white;
+    }
+    .h6{
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+        color: $color-price;
+    }
+    hr{
+        background: rgba($color: $theme-white, $alpha: 0.10);        
+    }
+    .form-control{
+        background: #FFFFFF;
+        border: 1px solid #D2D2D2;
+        border-radius: 10px;
+        padding: 10px 14px;
+        font-size: 14px;
+        line-height: 19px;
+        width: 65px;
+        height: 53px;
+        text-align: center;
+        outline: none;
+        margin-right: 24px;
+    }
+    .btn{
+        padding: 12px 21px;
+    }
+    .list-inline{
+        li{
+            color: $theme-white;
+        }
+    }
+    .list-details{
+        li{
+            color: $theme-white;
+            margin-bottom: 10px;
+            display: block;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 19px;
+            a{
+                color: $theme-white;
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+    }
+    .cart-form{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.related-courses{
+    .h3{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 54px;
+        margin-bottom: 20px;
+    }
+    .relatedSlider{
+        .swiper-slide{
+            padding: 10px;
+        }
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .cart{
+        .blogs-container{
+            div:last-child{
+                grid-column-start: 1;
+                grid-row-start: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+/*
+**********************************************
+* policy pages styling
+**********************************************
+*/
+.policy-page{
+    .policy-banner{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-gap: 24px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .padded-content{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .h5{
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 60px;
+    }
+    p{
+        margin-bottom: 15px;
+    }
+    ul, ol{
+        padding-left: 100px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        li{
+            line-height: 1.8;
+        }
+    }
+}
+@media (max-width: 769.98px) {
+    .policy-page{
+        .h2{
+            font-size: 40px;
+        }
+    }
+}
+@media (max-width: 575.98px) {
+    .policy-page{
+        .policy-banner{
+            grid-template-columns: minmax(0, 1fr);
+        }
+        .padded-content{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        ul, ol{
+            padding-left: 30px;
+        }
+    }
+}

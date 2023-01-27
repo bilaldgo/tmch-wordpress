@@ -1,0 +1,215 @@
+/*
+**********************************************
+* universities page styling
+**********************************************
+*/
+.universities{
+    .search-university{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+        grid-gap: 24px;
+        align-items: center;
+        .input-group{
+            .search-input{
+                width: 100%;
+                background: #FFFFFF;
+                border: 1px solid $theme-black;
+                box-shadow: 0px 4px 4px rgba(2, 2, 2, 0.25);
+                border-radius: 20px;
+                padding: 20px 30px;
+                font-family: 'Open Sans', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                outline: none;
+
+                background: $theme-white url("data:image/svg+xml,%3Csvg width='45' height='45' viewBox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='22.5' cy='22.5' r='22.5' fill='%23F8C365'/%3E%3Cpath d='M31.7309 31.3109L28.0209 27.6309C29.461 25.8353 30.1584 23.5562 29.9697 21.2622C29.781 18.9682 28.7206 16.8337 27.0064 15.2975C25.2923 13.7614 23.0547 12.9404 20.7538 13.0034C18.4529 13.0663 16.2636 14.0085 14.636 15.636C13.0085 17.2636 12.0663 19.4529 12.0034 21.7538C11.9404 24.0547 12.7614 26.2923 14.2975 28.0064C15.8337 29.7206 17.9682 30.781 20.2622 30.9697C22.5562 31.1584 24.8353 30.461 26.6309 29.0209L30.3109 32.7009C30.4039 32.7946 30.5145 32.869 30.6363 32.9198C30.7582 32.9706 30.8889 32.9967 31.0209 32.9967C31.1529 32.9967 31.2836 32.9706 31.4055 32.9198C31.5273 32.869 31.6379 32.7946 31.7309 32.7009C31.9111 32.5144 32.0119 32.2652 32.0119 32.0059C32.0119 31.7466 31.9111 31.4974 31.7309 31.3109ZM21.0209 29.0209C19.6364 29.0209 18.2831 28.6104 17.1319 27.8412C15.9808 27.072 15.0836 25.9788 14.5537 24.6997C14.0239 23.4206 13.8853 22.0131 14.1554 20.6553C14.4255 19.2974 15.0922 18.0501 16.0712 17.0712C17.0501 16.0922 18.2974 15.4255 19.6553 15.1554C21.0131 14.8853 22.4206 15.0239 23.6997 15.5537C24.9788 16.0836 26.072 16.9808 26.8412 18.1319C27.6104 19.2831 28.0209 20.6364 28.0209 22.0209C28.0209 23.8774 27.2834 25.6579 25.9706 26.9706C24.6579 28.2834 22.8774 29.0209 21.0209 29.0209Z' fill='black'/%3E%3C/svg%3E%0A");
+                background-repeat: no-repeat;
+                background-position: 98% 50%;
+
+                &::-webkit-input-placeholder {/* Chrome/Opera/Safari/Edge */
+                    /*styles here*/
+                    color: $placeholder-color;
+                }
+                
+                &::-ms-input-placeholder { /* Microsoft Edge */
+                   /*styles here*/
+                   color: $placeholder-color;
+                }
+                
+                &:-ms-input-placeholder {/* IE 10+ */
+                    /*styles here*/
+                    color: $placeholder-color;
+                }
+                
+                &::-moz-placeholder {/* Firefox 19+ */
+                    opacity: 1; /*Firefox by default has an opacity object that usually is ideal to reset so it matches webkit*/
+                    /*styles here*/
+                    color: $placeholder-color;
+                }
+                
+                &:-moz-placeholder {/* Firefox 18- */
+                    opacity: 1; /*Firefox by default has an opacity object that usually is ideal to reset so it matches webkit*/
+                    /*styles here*/
+                    color: $placeholder-color;
+                }
+                
+                &::placeholder {
+                    /*styles here*/
+                    color: $placeholder-color;
+                }
+            }
+        }
+        .select-container{
+            .sort-select{
+                display: flex;
+                margin-left: auto;
+
+                font-family: 'Open Sans', sans-serif;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 19px;
+                border: none;
+                outline: none;
+            }
+        }
+    }
+    .universities-grid{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        grid-gap: 24px;
+        align-items: center;
+        .university-box{
+            background: $theme-white;
+            padding: 40px 15px;
+            box-shadow: 5px 4px 30px rgba(2, 2, 2, 0.25);
+            border-radius: 10px;
+            // width: 312px;
+            // height: 350px;
+            img{
+                margin-bottom: 20px;
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                object-position: center center;
+            }
+            .h4{
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 30px;
+                text-align: center;
+                margin-bottom: 24px;
+                min-height: 60px;
+            }
+            .btn{
+                padding: 12px 32px;
+                margin-bottom: 0;
+            }
+        }
+        
+    }
+}
+// course box is global
+.course-box{
+    background: $theme-white;
+    box-shadow: 0px 4px 4px rgba(2, 2, 2, 0.25);
+    border-radius: 20px;
+    padding: 15px 15px 20px 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    img{
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        object-position: center center;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    .h5{
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        color: $theme-black;
+        margin-bottom: 0;
+    }
+    .course-price{
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+        color: $color-price;
+    }
+    hr{
+        margin: 20px 0 10px 0;
+    }
+    .btn{
+        font-size: 14px;
+        padding: 12px 25px;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+    .list-stats{
+        li{
+            font-size: 16px;
+            margin-right: 10px;
+            .bookmark-icon{
+                background: url("data:image/svg+xml,%3Csvg viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 0C7.26522 0 7.51957 0.115892 7.70711 0.322183C7.89464 0.528472 8 0.808262 8 1.1V9.9C8 10.1917 7.89464 10.4715 7.70711 10.6778C7.51957 10.8841 7.26522 11 7 11H1C0.734784 11 0.48043 10.8841 0.292893 10.6778C0.105357 10.4715 0 10.1917 0 9.9V1.1C0 0.808262 0.105357 0.528472 0.292893 0.322183C0.48043 0.115892 0.734784 0 1 0H7ZM7 1.1H4.5V5.5L3.25 4.2625L2 5.5V1.1H1V9.9H7V1.1Z' fill='black'/%3E%3C/svg%3E%0A");
+                width: 15px;
+                height: 15px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                display: inline-block;
+            }
+            .star-icon{
+                background: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 8.085L2.65292 9.86591C2.53663 9.96047 2.40976 10.005 2.27232 9.99955C2.13487 9.99451 2.01329 9.95521 1.90757 9.88167C1.80184 9.80812 1.72001 9.7083 1.66208 9.58222C1.60372 9.45614 1.60097 9.31955 1.65383 9.17245L2.55777 6.25681L0.258269 4.63351C0.1314 4.54945 0.0521069 4.43913 0.0203896 4.30254C-0.0113276 4.16596 -0.00604135 4.03987 0.0362483 3.9243C0.078538 3.80872 0.152545 3.70618 0.258269 3.61666C0.363993 3.52756 0.490862 3.48301 0.638876 3.48301H3.47757L4.39737 0.457047C4.45023 0.309951 4.53228 0.196898 4.6435 0.117887C4.7543 0.0392957 4.87313 0 5 0C5.12687 0 5.2457 0.0392957 5.3565 0.117887C5.46772 0.196898 5.54977 0.309951 5.60263 0.457047L6.52243 3.48301H9.36112C9.50914 3.48301 9.63601 3.52756 9.74173 3.61666C9.84746 3.70618 9.92146 3.80872 9.96375 3.9243C10.006 4.03987 10.0113 4.16596 9.97961 4.30254C9.94789 4.43913 9.8686 4.54945 9.74173 4.63351L7.44223 6.25681L8.34617 9.17245C8.39903 9.31955 8.3965 9.45614 8.33856 9.58222C8.2802 9.7083 8.19816 9.80812 8.09243 9.88167C7.98671 9.95521 7.86513 9.99451 7.72768 9.99955C7.59024 10.005 7.46337 9.96047 7.34708 9.86591L5 8.085Z' fill='black'/%3E%3C/svg%3E");
+                width: 15px;
+                height: 15px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                display: inline-block;
+            }
+        }
+    }
+
+    &:hover, &:focus{
+        box-shadow: 0px 0px 10px rgba(2, 2, 2, 0.25);
+    }
+}
+
+@media (max-width: 1024px) {
+    .universities{
+        .universities-grid{
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);            
+        }
+    }
+}
+@media (max-width: 991.98px) {
+    .universities{
+        .h2{
+            font-size: 30px;
+        }
+        .universities-grid{
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);            
+        }
+    }
+}
+@media (max-width: 769.98px) {
+    .universities{
+        .universities-grid{
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);            
+        }
+    }
+}
+@media (max-width: 575.98px) {
+    .universities{
+        .universities-grid{
+            grid-template-columns: minmax(0, 1fr);            
+        }
+    }
+}
+@media (max-width: 420px) {}
+@media (max-width: 320px) {}

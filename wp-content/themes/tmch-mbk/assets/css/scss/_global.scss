@@ -1,0 +1,484 @@
+/*
+**********************************************
+* Global component styling
+**********************************************
+*/
+*{
+    // outline: 1px solid red;
+}
+.h1{
+    font-size: 70px;
+}
+.h2{
+    font-size: 60px;
+}
+.h3{
+    font-size: 30px;
+}
+.h4{
+    font-size: 26px;
+}
+.h5{
+    font-size: 22px;
+}
+.h6{
+    font-size: 18px;
+}
+.h1, .h2, .h3 { 
+    font-weight: 700;
+    span{
+        padding: 1px 20px;
+        border-radius: 100px;
+        font-style: italic;
+        display: inline-block;
+        line-height: 1.1;
+        &.black{
+            background: $theme-black;
+            color: $base-color;
+            border: 1px solid $theme-black;            
+        }
+        &.yellow{
+            background: $base-color;
+            color: $theme-black;
+            border: 1px solid $theme-black;
+        }
+        &.yellow-outline{
+            background: $theme-black;
+            color: $base-color;
+            border: 1px solid $base-color;
+        }
+    }
+}
+
+hr{
+    border-color: rgba(2,2,2,0.1);
+}
+/*
+**********************************************
+* global utilities 
+**********************************************
+*/
+.bg-accent{
+    background-color: $accent-color;
+}
+.bg-yellow{
+    background-color: $base-color;
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.mx-auto {
+    margin: 0px auto;
+}
+.text-left{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+.text-end{
+    text-align: right;
+}
+.text-yellow{
+    color: $base-color;
+}
+.text-red{
+    color: #FF0000;
+}
+.text-green{
+    color: #00C844;
+}
+.text-black{
+    color: $theme-black;
+}
+.d-block{
+    display: block;
+}
+.d-inline-block{
+    display: inline-block;
+}
+.d-inline{
+    display: inline;
+}
+.mt-0{
+    margin-top: 0 !important;
+}
+.mb-0{
+    margin-bottom: 0 !important;
+}
+.mr-0{
+    margin-right: 0 !important;
+}
+.ml-0{
+    margin-left: 0 !important;
+}
+/*
+**********************************************
+* global grids 
+**********************************************
+*/
+.container{
+    max-width: 1320px;
+    margin: 0px auto;
+    padding: 0 1rem;
+} 
+section{
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+/*
+**********************************************
+* animations
+**********************************************
+*/
+.ripple-anim {
+    position: relative;
+    overflow: hidden;
+    z-index: 1
+}
+
+.ripple-anim span {
+    z-index: 2
+}
+
+.ripple-anim:before {
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.65,0,.34,1)
+}
+
+.ripple-anim:after, .ripple-anim:before {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    height: 200px;
+    width: 200px;
+    background: rgb(248 195 101);
+    border-radius: 100%;
+    animation-name: ripple;
+    animation-duration: 3s;
+    z-index: -1;
+    margin: 0px auto;
+}
+
+.ripple-anim:after {
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.65,0,.34,1)
+}
+
+@keyframes ripple {
+    0% {
+        opacity: 1;
+        transform: scale3d(.75,.75,1)
+    }
+
+    to {
+        opacity: 0;
+        transform: scale3d(1.5,1.5,1)
+    }
+}
+
+
+
+/*
+**********************************************
+* buttons 
+**********************************************
+*/
+.btn{
+    position: relative;
+    cursor: pointer;
+    border-radius: 100px;
+    max-height: 60px;
+    padding: 15px 40px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.5s ease;
+    margin-bottom: 15px;
+    &.btn-outline{
+        border: 2px solid $theme-black;
+        border-radius: 37px;
+        color: $theme-black;
+        background-color: transparent;
+        &:hover, &:focus{
+            border-color: $base-color;
+            background-color: $base-color;
+            box-shadow: inset 12em 0 0 0 $base-color;
+        }
+    }
+    &.btn-solid{
+        border: 2px solid $base-color;
+        background: $base-color;
+        border-radius: 37px;
+        color: $theme-black;
+        &:hover, &:focus{
+            border-color: $theme-black;
+            color: $theme-white;
+            background-color: $theme-black;
+            box-shadow: inset 12em 0 0 0 $theme-black;
+            .arrow-icon{
+                background-image: url("data:image/svg+xml,%3Csvg width='11' height='12' viewBox='0 0 11 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.44929 11.0027L0 8.5534L5.5523 2.99238H1.23772V0.00268555H11V9.76497H8.01902V5.45039L2.44929 11.0027Z' fill='white'/%3E%3C/svg%3E");
+            }
+        }
+    }
+    &.btn-solid-outline{
+        border: 2px solid $theme-black;
+        background: $base-color;
+        border-radius: 37px;
+        color: $theme-black;
+        &:hover, &:focus{
+            border-color: $theme-black;
+            color: $theme-white;
+            background-color: $theme-black;
+            box-shadow: inset 12em 0 0 0 $theme-black;
+            .arrow-icon{
+                background-image: url("data:image/svg+xml,%3Csvg width='11' height='12' viewBox='0 0 11 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.44929 11.0027L0 8.5534L5.5523 2.99238H1.23772V0.00268555H11V9.76497H8.01902V5.45039L2.44929 11.0027Z' fill='white'/%3E%3C/svg%3E");
+            }
+        }
+    }
+    &.btn-outline-black{
+        border: 2px solid $theme-black;
+        background-color: transparent;
+        border-radius: 37px;
+        color: $theme-black;
+        &:hover, &:focus{
+            color: $theme-white;
+            border-color: $theme-black;
+            background-color: $theme-black;
+            box-shadow: inset 12em 0 0 0 $theme-black;
+            .arrow-icon{
+                background-image: url("data:image/svg+xml,%3Csvg width='11' height='12' viewBox='0 0 11 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.44929 11.0027L0 8.5534L5.5523 2.99238H1.23772V0.00268555H11V9.76497H8.01902V5.45039L2.44929 11.0027Z' fill='white'/%3E%3C/svg%3E");
+            }
+        }
+    }
+    &.btn-solid-black{
+        border: 2px solid $theme-black;
+        background-color: $theme-black;
+        border-radius: 37px;
+        color: $theme-white;
+        .arrow-icon{
+            background-image: url("data:image/svg+xml,%3Csvg width='11' height='12' viewBox='0 0 11 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.44929 11.0027L0 8.5534L5.5523 2.99238H1.23772V0.00268555H11V9.76497H8.01902V5.45039L2.44929 11.0027Z' fill='white'/%3E%3C/svg%3E");
+        }
+        &:hover, &:focus{
+            border-color: $base-color;
+            color: $theme-black;
+            background: $base-color;
+            box-shadow: inset 12em 0 0 0 $base-color;
+        }
+    }
+    &.btn-solid-white{
+        border: 2px solid $base-color;
+        background: $base-color;
+        border-radius: 37px;
+        color: $theme-black;
+        &:hover, &:focus{
+            border-color: $theme-white;
+            background-color: $theme-white;
+            box-shadow: inset 12em 0 0 0 $theme-white;
+        }
+    }
+    .arrow-icon{
+        display: inline-block;
+        margin-left: 10px;
+        width: 11px;
+        height: 11px;
+        background-image: url("data:image/svg+xml,%3Csvg width='11' height='12' viewBox='0 0 11 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.44929 11.0027L0 8.5534L5.5523 2.99238H1.23772V0.00268555H11V9.76497H8.01902V5.45039L2.44929 11.0027Z' fill='black'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &:hover, &:focus{
+        .arrow-icon{
+            transform: rotate(45deg);
+        }
+    }
+}
+
+
+/*
+**********************************************
+* lists with bullets
+**********************************************
+*/
+.list-unstyled{
+    list-style: none;
+    padding-left: 0;
+}
+.list-inline{
+    list-style: none;
+    padding-left: 0;
+    li{
+        display: inline;
+        padding-right: 10px;
+    }
+}
+.list-yellow-checks{
+    list-style: none;
+    padding-left: 25px;
+
+    li{
+        &::before{
+            content: '';
+            position: absolute;
+            left: -22px;
+            top: 3px;
+            width: 16px;
+            height: 16px;
+            background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 9.00305C18 13.9736 13.9706 18.0031 9 18.0031C4.02944 18.0031 0 13.9736 0 9.00305C0 4.03249 4.02944 0.00305176 9 0.00305176C13.9706 0.00305176 18 4.03249 18 9.00305Z' fill='%23F8C365'/%3E%3Cpath d='M13.2107 4.19705C13.0344 4.09879 12.8405 4.03631 12.6401 4.01317C12.4397 3.99003 12.2368 4.00668 12.0428 4.06219C11.8489 4.1177 11.6677 4.21096 11.5098 4.33665C11.3518 4.46234 11.2202 4.61798 11.1223 4.79469L8.27157 9.9342L6.64005 8.29974C6.4984 8.15282 6.32896 8.03562 6.14162 7.955C5.95427 7.87438 5.75278 7.83194 5.54889 7.83017C5.345 7.82839 5.1428 7.86732 4.95409 7.94467C4.76537 8.02201 4.59393 8.13624 4.44975 8.28067C4.30557 8.42511 4.19156 8.59687 4.11435 8.78592C4.03714 8.97497 3.99829 9.17754 4.00006 9.3818C4.00183 9.58605 4.04419 9.78791 4.12467 9.97559C4.20514 10.1633 4.32212 10.333 4.46878 10.4749L7.53988 13.5516C7.8301 13.8431 8.22166 14.0031 8.62551 14.0031L8.83818 13.9877C9.07354 13.9547 9.29805 13.8674 9.49403 13.7328C9.69001 13.5981 9.85211 13.4197 9.96758 13.2116L13.8064 6.28916C13.9045 6.1126 13.9668 5.91843 13.9899 5.71774C14.013 5.51704 13.9964 5.31376 13.9411 5.11948C13.8858 4.92521 13.7928 4.74376 13.6674 4.58549C13.5421 4.42722 13.3869 4.29522 13.2107 4.19705Z' fill='black'/%3E%3C/svg%3E%0A");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+/*
+**********************************************
+* breadcrumbs
+**********************************************
+*/
+/* Style the list */
+.breadcrumbs {
+    padding: 20px 0;
+    list-style: none;
+    background-color: transparent;
+    border-bottom: 1px solid #EFEFEF;
+    li {
+        display: inline;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        a {
+            text-decoration: none;
+            color: $theme-black;
+            transition: all 0.5s ease;
+            &:hover {
+                color: $base-color;
+            }
+        }
+    }
+    li+li:before {
+        padding: 8px;
+        color: black;
+        content: "\003e";
+        font-size: 14px;
+    }
+}
+/*
+**********************************************
+* paginations
+**********************************************
+*/
+.pagination {
+    display: inline-block;
+    a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: all .5s ease;
+        &.active {
+            background-color: transparent;
+            color: $base-color;
+        }
+        &:hover:not(.active) {
+            background-color: transparent;
+            color: $base-color;
+        }
+        &:first-child{
+            background: $base-color;
+            border: 2px solid $base-color;
+            border-radius: 15px 15px 0px 15px;
+        }
+        &:last-child{
+            background: $base-color;
+            border: 2px solid $base-color;
+            border-radius: 15px 15px 15px 0px;
+        }
+        &.disabled{
+            background: transparent;
+            border: 2px solid $theme-black;
+        }
+
+    }
+}
+
+
+/*
+**********************************************
+* banner - services and etc
+**********************************************
+*/
+.banner-inner{
+    background: $base-color url('../images/bgs/hero-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0 50px 0;
+    .container{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-gap: 24px;
+        align-items: center;
+    }
+}
+/******************media queries - home page***********************/
+@media (max-width: 769.98px) {
+    // hero section
+    .banner-inner{
+        .h2{
+            font-size: 36px;
+        }
+        .container{
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+
+/*
+**********************************************
+* banner - if no banner is present 
+**********************************************
+*/
+.banner-none{
+    header{
+        background: $base-color;
+    }
+    main{
+        margin-top: 80px;
+    }
+}
+/*
+**********************************************
+* 404 page
+**********************************************
+*/
+.section-404{
+    .page-404{
+        margin: 0px auto;
+        text-align: center;
+        svg{
+            max-width: 600px;
+            max-height: 600px;
+        }
+    }
+}

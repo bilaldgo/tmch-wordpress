@@ -1,0 +1,269 @@
+/*
+**********************************************
+* content - 2 cols global styling
+**********************************************
+*/
+.content-2-col{
+    background: $accent-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+    .container{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-gap: 50px;
+        align-items: center;
+    }
+}
+/******************media queries - home page***********************/
+@media (max-width: 769.98px) {
+    // hero section
+    .content-2-col{
+        .h2{
+            font-size: 36px;
+        }
+        .container{
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+/*
+**********************************************
+* web stats - global styling
+**********************************************
+*/
+.web-stats{
+    .container{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        grid-gap: 24px;
+        align-items: center;
+        .col{
+            position: relative;
+            display: block;
+            &:not(:last-child):after{
+                content: '';
+                position: absolute;
+                right: -14px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 5px;
+                height: 32px;
+                background: $base-color;
+                border-radius: 27px;
+            }
+        }
+    }
+    .stat-box{
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        position: relative;
+        // background: grey;
+        
+        .stat-number{
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 68px;
+            text-align: center;
+            display: block;
+            width: 100%;
+        }
+        .stat-type{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            display: block;
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 575.98px) {
+    .web-stats{
+        .container{
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            .col{
+                &:nth-child(2):after{
+                    content: unset;
+                }
+            }
+        }
+    }
+}
+
+
+.reviews-section{
+    position: relative;
+    overflow: hidden;
+    .reviewSwiper{
+        .swiper-slide{
+            padding: 10px 17px;
+            .review-box{
+                padding: 20px 22px;
+            }
+        }
+    }
+    .pagination-container{
+        position: relative;
+        overflow: hidden;
+        margin-top: 50px;
+        .swiper-pagination{
+            position: relative;
+            left: unset;
+            bottom: unset;
+            .swiper-pagination-bullet-active{
+                background: $theme-black;
+            }
+        }
+    }
+}
+
+/****************** Instructors` ***********************/
+.instructors{
+    background: $theme-black url('../images/bgs/bg-textures.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 310px;
+    margin-top: -230px;
+    position: relative;
+    z-index: 11;
+    .heading-container{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 24px;
+        align-items: center;
+        position: relative;
+    }
+    .h2{
+        color: $theme-white;
+    }
+    p{
+        color: $theme-white;
+    }
+    .sliderNavigation-container{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        margin-left: auto;
+        width: 100%;
+        justify-content: flex-end;
+        .swiper-button-next, .swiper-button-prev{
+            position: relative;
+            border: 2px solid $base-color;
+            padding: 17px 17px 10px 17px;
+            transition: all 0.5s ease;
+            display: inline-block;
+            top: unset;
+            left: unset;
+            right: unset;
+            bottom: unset;
+            width: unset;
+            height: unset;
+            margin: none;
+            svg{
+                path{
+                    fill: $base-color;
+                }
+            }
+
+            &:after{
+                content: unset;
+            }
+            &:hover, &:focus{
+                background: $base-color;
+                svg{
+                    path{
+                        fill: $theme-black;
+                    }
+                }
+            }
+        }
+        .swiper-button-next{
+            border-radius: 15px 15px 15px 0px;
+            
+        }
+        .swiper-button-prev{
+            border-radius: 15px 15px 0px 15px;
+            margin-right: 10px;
+        }
+    }
+    .instructorSlider{
+        .instructor-box{
+            img{
+                border-radius: 20px;
+                width: 100%;
+                height: 312px;
+                object-fit: cover;
+                object-position: center top;
+                margin-bottom: 15px;
+            }
+            .instructor-details{
+                display: flex;
+                justify-content: space-between;
+                align-content: flex-start;
+                flex-wrap: wrap;
+                .details{
+                    font-family: 'Open Sans', sans-serif;
+                    .h5{
+                        font-weight: 600;
+                        font-size: 22px;
+                        line-height: 30px;
+                        color: $theme-white;
+                    }
+                    .h6{
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 25px;
+                        color: $theme-white;
+                    }
+                }
+                .social-connections{
+                    ul{
+                        list-style: none;
+                        padding-left: 0;
+                        margin-top: 8px;
+                        li{
+                            display: inline;
+                            margin-right: 5px;
+                            a{
+                                text-decoration: none;
+                                transition: all 0.5s ease;
+                                svg{
+                                    width: 20px;
+                                    height: 20px;
+                                    path{
+                                        fill: $theme-white;
+                                        transition: all 0.5s ease;
+                                    }
+                                }
+                                &:hover, &:focus{
+                                    svg{
+                                        path{
+                                            fill: $base-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575.98px) {
+    .instructors{
+        .heading-container{
+            grid-template-columns: auto;
+        }
+        .sliderNavigation-container{
+            // justify-content: flex-start;
+            margin-top: 30px;
+            padding-right: 20px;
+        }
+    }
+}

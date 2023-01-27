@@ -1,0 +1,38 @@
+/*
+**********************************************
+* Default grid mixins
+**********************************************
+*/
+
+@mixin grid($columns, $rows) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-template-rows: repeat($rows, 1fr);
+}
+
+@mixin grid-item($column, $row, $column-span: 1, $row-span: 1) {
+    grid-column: $column / span $column-span;
+    grid-row: $row / span $row-span;
+}
+
+
+// .grid-container {
+//     @include grid(3, 2);
+// }
+// .grid-item {
+//     @include grid-item(1, 1, 2, 1);
+// }
+
+
+/*
+**********************************************
+* PX to REM
+**********************************************
+*/
+$html-font-size: 16px;
+@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}
+@function rem($pxValue) {
+    @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}

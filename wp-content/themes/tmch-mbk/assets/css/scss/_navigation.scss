@@ -1,0 +1,209 @@
+/*
+**********************************************
+* Default navigation styling
+**********************************************
+*/
+header{
+    background: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: all 0.5s ease;
+    &.scroll-fix{
+        background: $theme-white;
+        box-shadow: 0 5px 2px rgba(2, 2, 2, 0.2);
+    }
+    .nav-wrapper {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        width: 100%;
+        height: 80px;
+        border-radius: 0 0 15px 15px;
+        padding: 0 25px;
+        z-index: 2;
+        
+    }
+    
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo {
+        height: 60px;
+    }
+    
+    .nav-tabs {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        .nav-tab{
+            a{
+                font-weight: 600;
+                font-size: 14px;
+                color: $theme-black;
+                padding: 10px 15px;
+                text-decoration: none;
+                position: relative;
+                transition: all 0.5s ease;
+                &:hover, &:focus{
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        width: 5px;
+                        height: 5px;
+                        background: $theme-black;
+                        border-radius: 100%;
+
+                    }
+                }
+            }
+            &:last-child{
+                margin-left: 10px;
+                a{
+                    padding: 10px 30px;
+                    background: $theme-black;
+                    color: $theme-white;
+                    border: 1px solid $theme-black;
+                    border-radius: 25px;
+                    transition: all 0.5s ease;
+                    display: inline-block;
+                    position: relative;
+                    overflow: hidden;
+                    &:hover, &:focus{
+                        background-color: $base-color;
+                        color: $theme-black;
+                    }   
+                }
+                .ripple-anim{
+                    
+                    &:before, &:after{
+                        z-index: 0;
+                        height: 100px;
+                        width: 100px;
+                        background: rgb(239 201 133 / 68%);
+                    }
+                }
+            }
+        }
+    }
+        
+    // .nav-tab:not(:last-child) {
+    //     padding: 10px 30px;
+    //     background: #222;
+    //     color: #fff;
+    //     border-radius: 25px;
+    // }
+    
+    
+    
+    .nav-tab,
+    .menu-btn {
+        cursor: pointer;
+    }
+    
+    .hidden {
+        display: none;
+    }
+}
+@media screen and (max-width: 800px) {
+    .nav-container {
+        position: fixed;
+        display: none;
+        overflow-y: auto;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100%;
+        background: #fff;
+        box-shadow: -500px 0 2px 500px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-tabs {
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 80px;
+        width: 100%;
+    }
+
+    .nav-tab:not(:last-child) {
+        padding: 20px 25px;
+        margin: 0;
+        border-right: unset;
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+    .nav-tab:last-child {
+        padding: 15px 25px;
+    }
+
+    .menu-btn {
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 20px;
+        height: 15px;
+        cursor: pointer;
+        z-index: 2;
+        // padding: 10px;
+        border-radius: 10px;
+    }
+
+    .menu-btn .menu {
+        display: block;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        background: #111;
+    }
+
+    .menu-btn .menu:nth-child(2) {
+        margin-top: 4px;
+        opacity: 1;
+    }
+
+    .menu-btn .menu:nth-child(3) {
+        margin-top: 4px;
+    }
+
+    #menuToggle:checked + .menu-btn .menu {
+        transition: transform 0.2s ease;
+    }
+
+    #menuToggle:checked + .menu-btn .menu:nth-child(1) {
+        transform: translate3d(0, 6px, 0) rotate(45deg);
+    }
+
+    #menuToggle:checked + .menu-btn .menu:nth-child(2) {
+        transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+        opacity: 0;
+    }
+
+    #menuToggle:checked + .menu-btn .menu:nth-child(3) {
+        transform: translate3d(0, -6px, 0) rotate(-45deg);
+    }
+
+    #menuToggle:checked ~ .nav-container {
+        z-index: 1;
+        display: flex;
+        animation: menu-slide-left 0.3s ease;
+    }
+    @keyframes menu-slide-left {
+        0% {
+            transform: translateX(200px);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}

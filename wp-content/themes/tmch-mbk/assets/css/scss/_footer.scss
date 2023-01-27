@@ -1,0 +1,231 @@
+/*
+**********************************************
+* Default footer styling
+**********************************************
+*/
+footer{
+    background: $accent-color url('../images/bgs/footer-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0 0;
+    position: relative;
+    overflow: hidden;
+    .newsletter-form-container{
+        margin-bottom: 40px;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+        background: #fff;
+        padding: 10px 10px 10px 20px;
+        position: relative;
+        overflow: hidden;
+    
+        .newsletter-form{
+            // border-radius: 100px;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 24px;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            .input-group{
+                position: relative;
+                overflow: hidden;
+                .form-label{
+                    position: absolute;
+                    left: 30px;
+                    top: 8px;
+                    font-size: 16px;
+                    font-family: 'Open Sans', sans-serif;
+                    z-index: 1;
+                    color: $placeholder-color;
+                    transition: all 0.5s ease;
+                }
+                .form-control{
+                    border: none;
+                    border-bottom: 1px solid $border-color;
+                    padding: 5px 30px;
+                    position: relative;
+                    overflow: hidden;
+                    height: 40px;
+                    width: 100%;
+                    
+                    &.icon-person{
+                        background: $theme-white url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.2111 15.7343C16.1032 13.8258 14.3299 12.3934 12.2311 11.7117C13.2371 11.1135 14.0189 10.2015 14.4563 9.11584C14.8938 8.03021 14.9627 6.83098 14.6525 5.70238C14.3423 4.57378 13.6701 3.57825 12.7392 2.86872C11.8083 2.15919 10.6703 1.7749 9.49981 1.7749C8.32936 1.7749 7.19128 2.15919 6.26041 2.86872C5.32953 3.57825 4.65736 4.57378 4.34715 5.70238C4.03695 6.83098 4.10586 8.03021 4.54331 9.11584C4.98075 10.2015 5.76254 11.1135 6.76856 11.7117C4.66972 12.3934 2.89637 13.8258 1.78848 15.7343C1.74201 15.8018 1.70999 15.8781 1.69442 15.9584C1.67886 16.0388 1.68008 16.1216 1.69803 16.2014C1.71597 16.2813 1.75025 16.3566 1.7987 16.4226C1.84715 16.4887 1.90872 16.5439 1.97956 16.585C2.0504 16.6261 2.12896 16.652 2.21031 16.6613C2.29167 16.6705 2.37406 16.6628 2.4523 16.6387C2.53054 16.6146 2.60295 16.5745 2.66497 16.5211C2.72699 16.4676 2.77729 16.4019 2.8127 16.3281C3.49134 15.1554 4.46643 14.1818 5.64014 13.505C6.81386 12.8281 8.14492 12.4718 9.49981 12.4718C10.8547 12.4718 12.1858 12.8281 13.3595 13.505C14.5332 14.1818 15.5083 15.1554 16.1869 16.3281C16.2223 16.4019 16.2726 16.4676 16.3346 16.5211C16.3967 16.5745 16.4691 16.6146 16.5473 16.6387C16.6256 16.6628 16.7079 16.6705 16.7893 16.6613C16.8707 16.652 16.9492 16.6261 17.0201 16.585C17.0909 16.5439 17.1525 16.4887 17.2009 16.4226C17.2494 16.3566 17.2836 16.2813 17.3016 16.2014C17.3195 16.1216 17.3208 16.0388 17.3052 15.9584C17.2896 15.8781 17.2576 15.8018 17.2111 15.7343ZM5.34356 7.12496C5.34356 6.30294 5.58732 5.49937 6.04401 4.81588C6.50071 4.13238 7.14983 3.59967 7.90928 3.28509C8.66874 2.97051 9.50442 2.88821 10.3107 3.04858C11.1169 3.20895 11.8575 3.60479 12.4387 4.18605C13.02 4.76731 13.4158 5.50789 13.5762 6.31412C13.7366 7.12035 13.6543 7.95604 13.3397 8.71549C13.0251 9.47495 12.4924 10.1241 11.8089 10.5808C11.1254 11.0375 10.3218 11.2812 9.49981 11.2812C8.3975 11.2812 7.34034 10.8433 6.5609 10.0639C5.78145 9.28443 5.34356 8.22727 5.34356 7.12496Z' fill='%237A7A7A'/%3E%3C/svg%3E%0A");
+                        background-repeat: no-repeat;
+                        background-position: 5px;
+                    }
+                    &.icon-tel{
+                        background: $theme-white url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 15 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8163 15.5109C4.8523 15.5109 0 10.6942 0 4.7741C0.00225516 3.75862 0.375921 2.7785 1.05152 2.01597C1.72713 1.25345 2.65869 0.760399 3.67302 0.628497C3.9316 0.600038 4.19258 0.654079 4.41813 0.782782C4.64367 0.911485 4.82206 1.10816 4.92741 1.34428L6.43718 4.8412C6.51549 5.02271 6.54689 5.22077 6.52853 5.41738C6.51016 5.614 6.44262 5.80295 6.33202 5.96707L5.08514 7.86092C5.64976 8.99835 6.58008 9.91659 7.72912 10.4706L9.61446 9.22539C9.77962 9.11487 9.97045 9.04797 10.1689 9.03101C10.3674 9.01405 10.5669 9.04759 10.7487 9.12846L14.2715 10.6197C14.5093 10.7243 14.7075 10.9013 14.8371 11.1252C14.9668 11.3491 15.0212 11.6082 14.9925 11.8649C14.8597 12.8717 14.363 13.7965 13.5948 14.4671C12.8266 15.1377 11.8393 15.5087 10.8163 15.5109ZM3.82325 1.81402C3.09837 1.90652 2.43231 2.25811 1.94978 2.80298C1.46724 3.34785 1.20132 4.04862 1.20181 4.7741C1.2038 7.30467 2.21738 9.73103 4.02001 11.5204C5.82264 13.3098 8.26696 14.3159 10.8163 14.3179C11.5471 14.3184 12.2531 14.0544 12.802 13.5754C13.3509 13.0965 13.7051 12.4353 13.7982 11.7157L10.2754 10.2245L8.39763 11.4697C8.22484 11.5831 8.02547 11.6502 7.81885 11.6646C7.61223 11.6789 7.40538 11.6401 7.21835 11.5517C5.81896 10.8797 4.687 9.76135 4.00352 8.3754C3.91341 8.19038 3.87297 7.98539 3.88613 7.78029C3.89929 7.5752 3.9656 7.37696 4.07863 7.20479L5.33302 5.31093L3.82325 1.81402Z' fill='%237A7A7A'/%3E%3C/svg%3E%0A");
+                        background-repeat: no-repeat;
+                        background-position: 5px;
+                    }
+                    &.icon-mail{
+                        background: $theme-white url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 17 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.04346 3.1187V11.8806C1.04346 12.4616 1.27424 13.0187 1.68503 13.4295C2.09583 13.8403 2.65298 14.0711 3.23393 14.0711H14.1863C14.7673 14.0711 15.3244 13.8403 15.7352 13.4295C16.146 13.0187 16.3768 12.4616 16.3768 11.8806V3.1187C16.3768 2.53775 16.146 1.98059 15.7352 1.5698C15.3244 1.159 14.7673 0.928223 14.1863 0.928223H3.23393C2.65298 0.928223 2.09583 1.159 1.68503 1.5698C1.27424 1.98059 1.04346 2.53775 1.04346 3.1187V3.1187Z' stroke='%237A7A7A' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.23389 4.21387L8.71008 7.49958L14.1863 4.21387' stroke='%237A7A7A' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                        background-repeat: no-repeat;
+                        background-position: 5px;
+                    }
+    
+                    &:hover, &:focus{
+                        outline: none;
+                    }
+                    &:focus{
+                        ~ .form-label{
+                            top: -2px;
+                            font-size: 12px;
+                        }
+                    }
+                    &:not(:placeholder-shown){
+                        ~ .form-label{
+                            top: -2px;
+                            font-size: 12px;
+                        }
+                    }
+                    // &:not([value=""]):valid{
+                    //     ~ .form-label{
+                    //         top: -2px;
+                    //         font-size: 12px;
+                    //     }
+                    // }
+                    &[value=""]:focus {
+                        ~ .form-label{
+                            top: -2px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .btn{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .footer-top{
+        .container{
+            padding: 30px 130px;
+        }
+    }
+    .footer-bottom-bg{
+        background: #1D1D1D;
+        min-height: 350px;
+        width: calc(100vw - 20vw);
+        margin: 0px auto;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 0px);
+        border-radius: 50px 50px 0px 0px;
+        z-index: 1;
+    }
+    .footer-bottom{
+        // background: $theme-black;
+        // padding: 90px 140px 50px 140px;
+        color: $theme-white;
+        display: grid;
+        grid-gap: 24px;
+        grid-template-columns: 1fr 1fr;
+        padding: 100px 50px 40px;
+        position: relative;
+        z-index: 2;
+        div:first-child{
+            padding-right: 60px;
+        }
+        .h3{
+            color: $theme-white;
+            font-weight: 700;
+        }
+        p{
+            color: $theme-white;
+        }
+        .sub-grid{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 24px;
+        }
+        .footer-list{
+            padding-left: 0;
+            list-style: none;
+            li{
+                margin-bottom: 15px;
+                a{
+                    color: rgba(255, 255, 255, 0.75);
+                    font-family: 'Open Sans', sans-serif;
+                    text-decoration: none;
+                    font-weight: 400;
+                    font-size: 16px;
+                    transition: all 0.5s ease;
+                    &:hover, &:focus{
+                        color: $base-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    footer{
+        .footer-bottom-bg{
+            width: calc(100vw - 10vw);
+        }
+    }
+}
+@media (max-width: 1367px) {
+    footer{
+        .footer-bottom-bg{
+            width: 100%;
+        }
+        
+    }
+}
+@media (max-width: 769.98px) {
+    footer{
+        .h2{
+            font-size: rem(34px);
+        }
+    
+        .footer-top{
+            .container{
+                padding: 30px 50px;
+            }
+            .newsletter-form-container{
+                padding: 25px;
+                .newsletter-form{
+                    grid-template-columns: auto;
+                }
+            }
+        }
+        .footer-bottom-bg{
+            display: none;
+        }
+        .container{
+            padding: 0;
+        }
+        .footer-bottom{
+            width: 100%;
+            background: $theme-black;
+            grid-template-columns: auto;
+            border-radius: 50px 50px 0 0;
+            .copyrights{
+                text-align: center;
+            }
+            .copyrights-terms{
+                ul{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575.98px) {
+    footer{
+        .footer-bottom{
+            div:first-child{
+                padding-right: 0;
+            }
+            .sub-grid{
+                grid-template-columns: auto;
+            }
+        }
+    }
+}

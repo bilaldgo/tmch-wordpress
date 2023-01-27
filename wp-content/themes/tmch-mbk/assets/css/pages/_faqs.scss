@@ -1,0 +1,117 @@
+/**********************************************************************
+* faqs page
+**********************************************************************/ 
+.faqs-page{
+    position: relative;
+    // background: black;
+    .accordions{
+        $midnight: #2c3e50;
+        $clouds: #ecf0f1;
+        padding: 0 50px;
+        /* Accordion styles */
+        .tabs {
+            position: relative;
+            overflow: hidden;
+        }
+        .tab {
+            width: 100%;
+            color: $theme-black;
+            overflow: hidden;
+            margin-bottom: 24px;
+            .tab-label {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                // padding: 1em;
+                background: $midnight;
+                font-weight: bold;
+                cursor: pointer;
+                background: $theme-white;
+                box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+                border-radius: 69px;
+                border: 2px solid $theme-black;
+                padding: 20px 70px 20px 40px;
+                position: relative;
+                overflow: hidden;
+                font-family: 'Open Sans', sans-serif;
+                /* Icon */
+                // &:hover {
+                //     background: darken($midnight, 10%);
+                // }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 10px;
+                    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 61 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m59.563 30c0 16.015-12.997 29-29.031 29s-29.031-12.985-29.031-29 12.997-29 29.031-29 29.031 12.985 29.031 29z' fill='%23000' stroke='%23000' stroke-width='2'/%3E%3Cpath d='m32.038 29.328h6.25v2.7813h-6.25v6.3125h-2.7813v-6.3125h-6.2343v-2.7813h6.2343v-6.375h2.7813v6.375z' fill='%23fff'/%3E%3C/svg%3E");
+                    width: 50px;
+                    height: 50px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    text-align: center;
+                    transition: all .5s ease;
+                }
+            }
+            .tab-content {
+                // display: none;
+                max-height: 0;
+                opacity: 0;
+                padding: 0 1em;
+                color: $theme-black;
+                background: white;
+                transition: all .5s ease;
+                border-radius: 0 0 35px 35px;
+                border: 2px solid $theme-black;
+                padding: 5px 40px;
+                p{
+                    margin-top: 0;
+                }
+            }
+            .tab-close {
+                display: flex;
+                justify-content: flex-end;
+                padding: 1em;
+                font-size: 0.75em;
+                background: $midnight;
+                cursor: pointer;
+                &:hover {
+                    background: darken($midnight, 10%);
+                }
+            }
+        }
+        input {
+            position: absolute;
+            opacity: 1;
+            z-index: -1;
+            display: none;
+        }
+        // :checked
+        input:checked {
+            + .tab-label {
+                border-radius: 35px 35px 0 0;
+                border-bottom: none;
+                border-color: $base-color;
+                &::after {
+                    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 61 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='30.532' cy='30' rx='30.031' ry='30' fill='%23F8C365'/%3E%3Cpath d='m39.584 33.552h-15.117v-3.6036h15.117v3.6036z'/%3E%3C/svg%3E");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    transform: rotate(360deg);
+                }
+            }
+            ~ .tab-content {
+                max-height: 100vh;
+                opacity: 1;
+                border-top: none;
+                border-color: $base-color;
+                // padding: 1em;
+                
+            }
+        }
+    }
+}
+@media (max-width: 375.98px){
+    .faqs-page{
+        .cta-snippet{
+            display: none;   
+        }
+    }
+}
