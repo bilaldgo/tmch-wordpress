@@ -143,7 +143,7 @@ function tmch_mbk_scripts() {
 	wp_enqueue_style( 'tmch-mbk--custom-style', get_template_directory_uri() . '/assets/css/tmch-main.css', array(), _S_VERSION );
 
 	wp_enqueue_script( 'tmch-mbk-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'tmch-mbk-navigation', get_template_directory_uri() . '/assets/js/custom.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'tmch-mbk-custom-js', get_template_directory_uri() . '/assets/js/custom.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -178,3 +178,15 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+/**
+ * add additional class on navigation li
+ * source : (https://stackoverflow.com/questions/14464505/how-to-add-class-in-li-using-wp-nav-menu-in-wordpress)
+ */
+function add_additional_class_on_li($classes, $item, $args) {
+    if(isset($args->add_li_class)) {
+        $classes[] = $args->add_li_class;
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);

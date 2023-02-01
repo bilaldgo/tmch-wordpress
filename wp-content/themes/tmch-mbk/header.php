@@ -35,34 +35,31 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'tmch-mbk' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$tmch_mbk_description = get_bloginfo( 'description', 'display' );
-			if ( $tmch_mbk_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $tmch_mbk_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tmch-mbk' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+		<div class="container">
+			<div class="nav-wrapper">
+				<div class="logo-container">
+					<?php the_custom_logo(); ?>
+				</div>
+				<nav>
+					<input class="hidden" type="checkbox" id="menuToggle">
+					<label class="menu-btn" for="menuToggle">
+						<div class="menu"></div>
+						<div class="menu"></div>
+						<div class="menu"></div>
+					</label>
+					<div class="nav-container">
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+								'items_wrap'     => '<ul class="nav-tabs">%3$s</ul>',
+								'add_li_class'   => 'nav-tab'
+							)
+						);
+					?>
+					</div>
+				</nav>
+			</div>
+		</div>
 	</header><!-- #masthead -->

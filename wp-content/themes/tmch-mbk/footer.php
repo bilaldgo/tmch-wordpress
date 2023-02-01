@@ -111,8 +111,10 @@
 	</footer>
 </div><!-- #page -->
 
-<?php wp_footer(); ?>
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<?php wp_footer(); ?>
+<?php echo "Page name: " . get_page_template();?>
 </body>
 </html>

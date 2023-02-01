@@ -888,3 +888,8 @@ textarea {
 	margin-right: auto;
 	margin-bottom: 1.5em;
 }
+/* utilities custom
+--------------------------------------------- */
+.d-none{
+	display: none;
+}

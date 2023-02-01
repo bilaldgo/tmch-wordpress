@@ -147,16 +147,16 @@ window.onscroll = function() {scrollFunction()};
 var prevScrollpos = window.pageYOffset;
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("nav-top").classList.add("scroll-fix");
+        document.getElementById("masthead").classList.add("scroll-fix");
     } else {
-        document.getElementById("nav-top").classList.remove("scroll-fix");
+        document.getElementById("masthead").classList.remove("scroll-fix");
     }
     
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-        document.getElementById("nav-top").style.top = "0";
+        document.getElementById("masthead").style.top = "0";
       } else {
-        document.getElementById("nav-top").style.top = "-80px";
+        document.getElementById("masthead").style.top = "-80px";
       }
       prevScrollpos = currentScrollPos;
 }
