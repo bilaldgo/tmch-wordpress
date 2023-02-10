@@ -14,8 +14,8 @@
 		<div class="footer-top">
 			<div class="container">
 				<div class="mx-auto text-center">
-					<span class="h2">Lorem <span class="yellow-outline">Ipsum</span> Elite</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<span class="h2">Get <span class="yellow-outline">Started</span> From Here</span>
+					<p>Let us know your details to get started with us</p>
 				</div>
 				<div class="clearfix" style="margin-top: 20px;"></div>
 				<div class="newsletter-form-container">
@@ -44,49 +44,18 @@
 			<div class="footer-bottom-bg"></div>
 			<div class="footer-bottom">
 				<div>
-					<span class="h3">Logo Here</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+					<?php dynamic_sidebar( 'footer_area' ); ?>
 				</div>
 				<div>
 					<div class="sub-grid">
 						<div>
-							<span class="h5">Company</span>
-							<ul class="footer-list">
-								<li>
-									<a href="#">About Us</a>
-								</li>
-								<li>
-									<a href="#">FAQs</a>
-								</li>
-								<li>
-									<a href="#">Blog</a>
-								</li>
-							</ul>
+							<?php dynamic_sidebar( 'footer_list_one' ); ?>
 						</div>
 						<div>
-							<span class="h5">Resources</span>
-							<ul class="footer-list">
-								<li>
-									<a href="#">Privacy Policy</a>
-								</li>
-								<li>
-									<a href="#">Disclaimer</a>
-								</li>
-								<li>
-									<a href="#">Cookie Policy</a>
-								</li>
-							</ul>
+							<?php dynamic_sidebar( 'footer_list_two' ); ?>
 						</div>
 						<div>
-							<span class="h5">Product</span>
-							<ul class="footer-list">
-								<li>
-									<a href="#">Order</a>
-								</li>
-								<li>
-									<a href="#">Money Back Guaranteed</a>
-								</li>
-							</ul>
+							<?php dynamic_sidebar( 'footer_list_three' ); ?>
 						</div>
 					</div>
 				</div>
@@ -94,17 +63,7 @@
 					<p>&copy; Take My Class Help <?php echo date('Y'); ?>, All Right Reserved.</p>
 				</div>
 				<div class="copyrights-terms">
-					<ul class="footer-list list-inline text-end">
-						<li>
-							<a href="#">Terms & Conditions</a>
-						</li>
-						<li>
-							<a href="#">Cookies Policy</a>
-						</li>
-						<li>
-							<a href="#">Privacy Policy</a>
-						</li>
-					</ul>
+					<?php dynamic_sidebar( 'footer_terms_list' ); ?>
 				</div>
 			</div>
 		</div>
@@ -115,6 +74,6 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 <?php wp_footer(); ?>
-<?php echo "Page name: " . get_page_template();?>
+<!-- <?php //echo "Page name: " . get_page_template();?> -->
 </body>
 </html>

@@ -19,4 +19,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
+<div class="clearfix" style="margin-top: 100px !important;"></div>
+<ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?> mt-50">

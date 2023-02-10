@@ -3,6 +3,7 @@
 * Default navigation styling
 **********************************************
 */
+
 header{
     background: transparent;
     position: fixed;
@@ -271,5 +272,15 @@ header{
                 }
             }
         }
+    }
+}
+
+/*
+* fix for woo commerce related only
+*/ 
+body:not(.home, .page-template-page-about, .page-template-page-universities, .page-template-page-service){
+    header{
+        background: $base-color;
+        box-shadow: 0 5px 2px rgba(2, 2, 2, 0.2);
     }
 }

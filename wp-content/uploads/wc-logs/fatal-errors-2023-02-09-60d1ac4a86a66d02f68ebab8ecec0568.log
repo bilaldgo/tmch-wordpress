@@ -1,0 +1,16 @@
+2023-02-09T15:46:48+00:00 CRITICAL syntax error, unexpected end of file in C:\xampp\htdocs\tmch-wordpress\wp-content\themes\tmch-mbk\functions.php on line 334
+
+2023-02-09T15:46:57+00:00 CRITICAL syntax error, unexpected end of file in C:\xampp\htdocs\tmch-wordpress\wp-content\themes\tmch-mbk\functions.php on line 334
+
+2023-02-09T15:49:16+00:00 CRITICAL syntax error, unexpected end of file, expecting "(" in C:\xampp\htdocs\tmch-wordpress\wp-content\themes\tmch-mbk\functions.php on line 336
+
+2023-02-09T15:52:40+00:00 CRITICAL Cannot redeclare cta_guarantee_function() (previously declared in C:\xampp\htdocs\tmch-wordpress\wp-content\themes\tmch-mbk\functions.php:345) in C:\xampp\htdocs\tmch-wordpress\wp-content\themes\tmch-mbk\functions.php on line 406
+
+2023-02-09T15:57:37+00:00 CRITICAL Uncaught Error: Undefined constant "post" in C:\xampp\htdocs\tmch-wordpress\wp-content\themes\tmch-mbk\page-service.php:29
+Stack trace:
+#0 C:\xampp\htdocs\tmch-wordpress\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\tmch-wordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\tmch-wordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\tmch-wordpress\wp-content\themes\tmch-mbk\page-service.php on line 29
+

@@ -142,7 +142,7 @@ footer{
             grid-template-columns: auto auto auto;
             grid-gap: 24px;
         }
-        .footer-list{
+        .footer-list, .menu{
             padding-left: 0;
             list-style: none;
             li{
@@ -157,6 +157,16 @@ footer{
                     &:hover, &:focus{
                         color: $base-color;
                     }
+                }
+            }
+        }
+        .menu-footer-terms-list-container{
+            .menu{
+                text-align: right;
+                li{
+                    display: inline;
+                    padding-right: 10px;
+
                 }
             }
         }

@@ -10,8 +10,17 @@ get_header();
         <section class="banner-inner">
             <div class="container">
                 <div>
-                    <span class="h2">About <span class="black">Us</span></span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. </p>
+                    <?php if(get_field('banner_heading') || get_field('banner_text')) : ?>
+                    <?php 
+                        the_field('banner_heading');
+                        the_field('banner_text');
+                    ?>
+                    <?php endif; ?>
+                    <?php if(get_field('banner_button')) : ?>
+                        <a href="#" class="btn btn-outline-black">
+                            <?php if(get_field('banner_button_text')) : the_field('banner_button_text'); endif; ?><span class="arrow-icon"></span>
+                        </a>
+                    <?php endif; ?>
                 </div>
                 <div>
                     <svg class="img-fluid" viewBox="0 0 617 290" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -337,28 +346,23 @@ get_header();
                         <path d="M553.644 301.717H7.63477V303.885H553.644V301.717Z" fill="black"/>
                     </svg>
                 </div>
-                <div>
-                    <span class="h2">We Are <span class="yellow">With</span> You</span>
-                    <p>We are here to help you with our qualified team of teachers, and to provide you with the best online homework help for our students who are stressed out by the virtue of online learning.</p>
-                    <p>We assure our students of the best online homework help and provide them with the time and significant resources that are necessary for them to lead a normal life.</p>
-                    <p>Therefore, by providing homework relief to our students, we provide them with the essence of life. So that, they never feel overwhelmed while taking our online classes.</p>
-                    <div class="clearfix" style="margin-top: 40px;"></div>
-                    <a href="#" class="btn btn-outline">
-                        Get Started <span class="arrow-icon"></span>
-                    </a>
+                <div>                    
+                    <?php 
+                        if(get_field('content_space')) : 
+                            the_field('content_space');
+                        endif;
+                    ?>
                 </div>
             </div>
         </section>
         <section class="content-2-col">
             <div class="container">
                 <div>
-                    <span class="h2">We Offer <span class="yellow">Everlating</span> Trust!</span>
-                    <p>A meager amount of online tutoring service providers claiming to be trustworthy and credible are considered and recognized as online homework helpers.</p>
-                    <p>Because of these online homework providers, students may wonder if they can trust the services of, Take My Online Class Help. We have worked hard and established our brand to achieve a position in the market by delivering quality online classes and helping students. Only authenticity suffices for the commitment that we have made over time!</p>
-                    <div class="clearfix" style="margin-top: 40px;"></div>
-                    <a href="#" class="btn btn-outline">
-                        Get Started <span class="arrow-icon"></span>
-                    </a>
+                    <?php 
+                        if(get_field('content_space_left')) : 
+                            the_field('content_space_left');
+                        endif;
+                    ?>
                 </div>
                 <div>
                     <svg class="img-fluid" viewBox="0 0 594 374" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -635,10 +639,16 @@ get_header();
             <div class="cta">
               <div class="grid-container">
                 <div>
-                  <span class="h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,</span>
-                  <a href="#" class="btn btn-outline-black">
-                    Enroll Now <span class="arrow-icon"></span>
-                  </a>
+                    <?php if(get_field('cta_text')) : ?>
+                        <?php 
+                            the_field('cta_text');
+                        ?>
+                    <?php endif; ?>
+                    <?php if(get_field('cta_link')) : ?>
+                        <a href="<?php echo get_site_url() . "/" . get_field('cta_link') ;?>" class="btn btn-outline-black">
+                            Enroll Now <span class="arrow-icon"></span>
+                        </a>
+                    <?php endif; ?>
                 </div>
                 <div>
                   <div class="svg-container">

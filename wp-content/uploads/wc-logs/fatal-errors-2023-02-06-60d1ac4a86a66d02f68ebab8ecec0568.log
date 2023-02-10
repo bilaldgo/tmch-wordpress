@@ -1,0 +1,13 @@
+2023-02-06T12:15:17+00:00 CRITICAL syntax error, unexpected token "return" in C:\xampp\htdocs\tmch-wordpress\wp-content\themes\tmch-mbk\woocommerce\archive-product.php on line 37
+
+2023-02-06T12:20:31+00:00 CRITICAL Uncaught TypeError: implode(): Argument #1 ($pieces) must be of type array, string given in C:\xampp\htdocs\tmch-wordpress\wp-content\themes\tmch-mbk\woocommerce\archive-product.php:37
+Stack trace:
+#0 C:\xampp\htdocs\tmch-wordpress\wp-content\themes\tmch-mbk\woocommerce\archive-product.php(37): implode('', NULL)
+#1 C:\xampp\htdocs\tmch-wordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\tmch-wordpress\wp-content\plugins\woocommerce\templates\taxonomy-product-cat.php(22): wc_get_template('archive-product...')
+#3 C:\xampp\htdocs\tmch-wordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\tmch-wordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\tmch-wordpress\index.php(17): require('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\tmch-wordpress\wp-content\themes\tmch-mbk\woocommerce\archive-product.php on line 37
+
